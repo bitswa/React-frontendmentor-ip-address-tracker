@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @apply font-Rubik
+}
+
+.App {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 1fr 1.35fr;
+}
+

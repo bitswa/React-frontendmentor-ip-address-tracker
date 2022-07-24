@@ -1,33 +1,19 @@
+import { Info } from "./Info";
+
 export function Main({ data }) {
   return (
-    <div className="text-center">
-      <main className="flex justify-center">
-        {data?.map((address) => {
-          const { region, timezone, country } = address.location;
-          return (
-            <div className="w-[90vw]">
-              <div>
-                <h4 className="text">IP ADDRESS</h4>
-                <span>{address.ip}</span>
-              </div>
-              <div>
-                <h4>LOCATION</h4>
-                <span>
-                  {region}, {country}
-                </span>
-              </div>
-              <div>
-                <h4>TIMEZONE</h4>
-                <span>UTC {timezone}</span>
-              </div>
-              <div>
-                <h4>ISP</h4>
-                <span>{address.isp}</span>
-              </div>
-            </div>
-          );
-        })}
-      </main>
+    <div className="relative flex justify-center bg-gray-400">
+      {data?.map((address) => {
+        const { region, timezone, country } = address.location;
+        return (
+          <main className="absolute top-0 translate-y-[-125px] p-4 w-[90vw] flex flex-col items-center text-center gap-3 bg-white rounded-xl">
+            <Info title={"ip address"} subtitle={address.ip} />
+            <Info title={"location"} subtitle={`${region}, ${country}`} />
+            <Info title={"timezone"} subtitle={`UTC ${timezone}`} />
+            <Info title={"ISP"} subtitle={address.isp} />
+          </main>
+        );
+      })}
     </div>
   );
 }

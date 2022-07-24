@@ -5,7 +5,7 @@ export function Header() {
       <form className="rounded-xl overflow-hidden flex w-[80%]">
         <input className="p-2 w-full text-lg px-6 " type="text" />
         <button className="p-5 bg-black " type="submit">
-          <img className="self-center" src="./public/images/icon-arrow.svg" alt="" />
+          <img className="self-center" src="./images/icon-arrow.svg" alt="" />
         </button>
       </form>
     </div>

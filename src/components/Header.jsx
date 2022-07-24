@@ -9,6 +9,7 @@ export function Header({ setIp, handleSubmit }) {
         <input
           className="p-2 w-full text-lg px-6"
           type="text"
+          placeholder="Search for any IP address or domain"
           onChange={(e) => setIp(e.target.value)}
         />
         <button className="p-5 bg-black " type="submit">

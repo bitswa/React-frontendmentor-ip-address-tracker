@@ -25,7 +25,7 @@ export function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App grid h-[100vh]">
       <Header handleSubmit={handleSubmit} setIp={setIp} />
       <Main data={data} />
     </div>

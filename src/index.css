@@ -9,12 +9,15 @@
 }
 
 body {
-  @apply font-Rubik
+  @apply font-Rubik;
 }
 
 .App {
-  display: grid;
-  height: 100vh;
-  grid-template-rows: 1fr 1.35fr;
+  grid-template-rows: 1fr 1.45fr;
 }
 
+@media screen and (min-width: 640px) {
+  .bord:not(:last-child ) {
+    border-right: 1px solid grey;
+  }
+}

@@ -1,13 +1,13 @@
 export function Header({ setIp, handleSubmit }) {
   return (
-    <div className="bg-blue-600 flex flex-col items-center">
-      <h1 className="py-6 text-xl text-white">IP Address Tracker</h1>
+    <header className="bg-header bg-cover  flex flex-col items-center">
+      <h1 className="py-5 text-2xl text-white">IP Address Tracker</h1>
       <form
-        className="rounded-xl overflow-hidden flex w-[90%]"
+        className="rounded-xl overflow-hidden flex w-[90%] max-w-lg"
         onSubmit={(e) => handleSubmit(e)}
       >
         <input
-          className="p-2 px-4 outline-none w-full text-base"
+          className="p-2 px-4 outline-none w-full text-base text-darkGray"
           type="text"
           placeholder="Search for any IP address or domain"
           onChange={(e) => setIp(e.target.value)}
@@ -20,6 +20,6 @@ export function Header({ setIp, handleSubmit }) {
           />
         </button>
       </form>
-    </div>
+    </header>
   );
 }

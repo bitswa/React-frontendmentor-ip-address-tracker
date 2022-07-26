@@ -1,15 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Header } from "./components/Header";
 import { Main } from "./components/Main";
 
 export function App() {
-  
   const [data, setData] = useState([]);
   const [ip, setIp] = useState("8.8.8.8");
-
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,7 +20,7 @@ export function App() {
   };
 
   return (
-    <div className="App grid h-[100vh]">
+    <div className="grid grid-rows-[1fr_1.45fr] h-[100vh] font-Rubik">
       <Header handleSubmit={handleSubmit} setIp={setIp} />
       <Main data={data} />
     </div>

@@ -7,7 +7,7 @@ export function Header({ setIp, handleSubmit }) {
         onSubmit={(e) => handleSubmit(e)}
       >
         <input
-          className="p-2 w-full text-lg px-6"
+          className="p-2 px-4 outline-none w-full text-base"
           type="text"
           placeholder="Search for any IP address or domain"
           onChange={(e) => setIp(e.target.value)}
